@@ -43,11 +43,7 @@ async def help_command(c, m: Message):
         caption=HELP_MESSAGE.format(event.from_user.mention))
 
   
-    if s = HELP_MESSAGE.format(
-                firstname=temp.FIRST_NAME,
-                username=temp.BOT_USERNAME)
-             
-                 
+   
 
     
 
