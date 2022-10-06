@@ -14,7 +14,7 @@ from pyrogram.enums import ParseMode
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             InputMediaPhoto, Message)
-from shortzyi import Shortzyi
+from shortzy import Shortzy
 
 from config import *
 from database import db
@@ -139,7 +139,7 @@ async def mdisk_api_handler(user, text, alias=""):
 async def replace_link(user, text, alias=""):
     api_key = user["shortener_api"]
     base_site = "atglinks.com"
-    shortzyi = Shortzyi(api_key, base_site)
+    shortzy = Shortzy(api_key, base_site)
     links = await extract_link(text)
     for link in links:
         https = link.split(":")[0]
@@ -151,16 +151,16 @@ async def replace_link(user, text, alias=""):
             include = user["include_domain"]
             domain = [domain.strip() for domain in include]
             if any(i in link for i in domain):
-                short_link = await shortzyi.convert(link, alias)
+                short_link = await shortzy.convert(link, alias)
                 text = text.replace(long_url, short_link)
         elif user["exclude_domain"]:
             exclude = user["exclude_domain"]
             domain = [domain.strip() for domain in exclude]
             if all(i not in link for i in domain):
-                short_link = await shortzyi.convert(link, alias)
+                short_link = await shortzy.convert(link, alias)
                 text = text.replace(long_url, short_link)
         else:
-            short_link = await shortzyi.convert(link, alias)
+            short_link = await shortzy.convert(link, alias)
             text = text.replace(long_url, short_link)
     return text
 
