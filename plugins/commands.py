@@ -25,27 +25,38 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 @Client.on_message(filters.command('start') & filters.private & filters.incoming)
 @private_use
 async def start(c:Client, m:Message):
-  
-   await m.reply_photo(
-        photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
-        caption=START_MESSAGE.format(event.from_user.mention))
+    NEW_USER_REPLY_MARKUP = [
+                [
+                    InlineKeyboardButton('Ban', callback_data=f'ban#{m.from_user.id}'),
+                    InlineKeyboardButton('Close', callback_data='delete'),
+                ]
+            ]
+    is_user = await is_user_exist(m.from_user.id)
+
+    reply_markup = InlineKeyboardMarkup(NEW_USER_REPLY_MARKUP)
+
+    if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
+    new_user = await get_user(m.from_user.id)  
+    t = START_MESSAGE.format(m.from_user.mention, new_user["method"], new_user["base_site"])
+
+    if WELCOME_IMAGE:
+        return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
+    await m.reply_text(t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
 
-   
-
-  
 @Client.on_message(filters.command('help') & filters.private)
 @private_use
 async def help_command(c, m: Message):
-  
-   await m.reply_photo(
-        photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
-        caption=HELP_MESSAGE.format(event.from_user.mention))
+    s = HELP_MESSAGE.format(
+                firstname=temp.FIRST_NAME,
+                username=temp.BOT_USERNAME,
+                repo=SOURCE_CODE,
+                owner="@ask_admin001" )
 
-  
-   
+    if WELCOME_IMAGE:
+        return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
+    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-    
 
 @Client.on_message(filters.command('about'))
 @private_use
