@@ -24,10 +24,9 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 
 @Client.on_message(filters.command('start') & filters.private & filters.incoming)
 @private_use
-async def WELCOME_IMAGE:
-        return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
+async def 
+    return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
     await m.reply_text(t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
-
 
 
     if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
