@@ -24,7 +24,6 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 
 @Client.on_message(filters.command('start') & filters.private & filters.incoming)
 @private_use
-async def 
     return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
     await m.reply_text(t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
