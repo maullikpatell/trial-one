@@ -26,7 +26,7 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 @private_use
 async def start(c:Client, m:Message):
   
-   await event.reply_photo(
+   await m.reply_photo(
         photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
         caption=START_MESSAGE.format(event.from_user.mention)
 
