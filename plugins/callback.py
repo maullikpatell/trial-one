@@ -119,7 +119,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
     if query.data == 'delete':
         await query.message.delete()
     elif query.data == 'help_command':
-        await query.message.edit(HELP_MESSAGE.format(firstname=temp.FIRST_NAME, username=temp.BOT_USERNAME, repo=SOURCE_CODE, owner="@ask_admin001"), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+        await query.message.edit(HELP_MESSAGE.format(firstname=temp.FIRST_NAME, username=temp.BOT_USERNAME, repo=SOURCE_CODE, owner="@TechnicalATG20"), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
     elif query.data == 'about_command':
         bot = await bot.get_me()
