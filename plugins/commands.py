@@ -28,7 +28,7 @@ async def start(c:Client, m:Message):
   
    await m.reply_photo(
         photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
-        caption=START_MESSAGE.format(event.from_user.mention)
+        caption=START_MESSAGE.format(event.from_user.mention))
 
 
     if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
