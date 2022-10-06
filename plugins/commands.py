@@ -37,7 +37,7 @@ async def start(c:Client, m:Message):
 
     if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
     new_user = await get_user(m.from_user.id)  
-    t = START_MESSAGE.format(m.from_user.mention, new_user["method"], new_user["base_site"])
+    t = START_MESSAGE.format(m.from_user.mention, new_user["method"], new_user[base_site=atglinks.com])
 
     if WELCOME_IMAGE:
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
@@ -52,9 +52,7 @@ async def help_command(c, m: Message):
                 username=temp.BOT_USERNAME,)
                 
 
-    if WELCOME_IMAGE:
-        return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
-    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+   
 
 
 @Client.on_message(filters.command('about'))
