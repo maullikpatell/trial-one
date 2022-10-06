@@ -49,9 +49,8 @@ async def start(c:Client, m:Message):
 async def help_command(c, m: Message):
     s = HELP_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
-                username=temp.BOT_USERNAME,
-                repo=SOURCE_CODE,
-                owner="@ask_admin001" )
+                username=temp.BOT_USERNAME,)
+                
 
     if WELCOME_IMAGE:
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
