@@ -38,9 +38,9 @@ async def start(c:Client, m:Message):
 @private_use
 async def help_command(c, m: Message):
   
-    WELCOME_IMAGE:
-        return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
-    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+   await m.reply_photo(
+        photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
+        caption=HELP_MESSAGE.format(event.from_user.mention))
 
   
     if s = HELP_MESSAGE.format(
