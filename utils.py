@@ -138,7 +138,7 @@ async def mdisk_api_handler(user, text, alias=""):
 
 async def replace_link(user, text, alias=""):
     api_key = user["shortener_api"]
-    base_site = user["base_site"]
+    base_site = "atglinks.com"
     shortzy = Shortzy(api_key, base_site)
     links = await extract_link(text)
     for link in links:
@@ -359,7 +359,7 @@ async def user_api_check(user):
     if user_method in ["mdisk", "mdlink"] and not user["mdisk_api"]:
         text += "\n\nSet your /mdisk_api to continue..."
     if user_method in ["shortener", "mdlink"] and not user["shortener_api"]:
-        text += f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+        text += f"\n\nSet your /shortener_api to continue...\nCurrent Website {atglinks.com}"
 
     if not user_method:
         text = "\n\nSet your /method first"
