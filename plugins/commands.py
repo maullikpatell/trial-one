@@ -37,7 +37,7 @@ async def start(c:Client, m:Message):
 
     if not is_user and LOG_CHANNEL: await c.send_message(LOG_CHANNEL, f"#NewUser\n\nUser ID: `{m.from_user.id}`\nName: {m.from_user.mention}", reply_markup=reply_markup)
     new_user = await get_user(m.from_user.id)  
-    t = START_MESSAGE.format(m.from_user.mention, new_user["method"], new_user["base_site"])
+    t = START_MESSAGE.format(m.from_user.mention, new_user["method"], new_user["base_site=atglinks.com"])
 
     if WELCOME_IMAGE:
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
@@ -76,7 +76,7 @@ async def method_handler(c: Client, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     if len(cmd) == 1:
-        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
+        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site=atglinks.com"])
         return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
     elif len(cmd) == 2:
         method = cmd[1]
@@ -157,7 +157,7 @@ async def shortener_api_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     if len(cmd) == 1:
-        s = SHORTENER_API_MESSAGE.format(base_site=user["base_site"], shortener_api=user["shortener_api"])
+        s = SHORTENER_API_MESSAGE.format(base_site=user["base_site=atglinks.com"], shortener_api=user["shortener_api"])
 
         return await m.reply(s)
     elif len(cmd) == 2:
