@@ -62,23 +62,23 @@ Extra......
 
 - /exclude_domain
 If you have any questions on how to use me,
-have a look at my [Tutorial](),
+have a look at my [Tutorial](https://youtu.be/ZNDKZHgNmdg),
 or contact to {owner}.
-
-
-
-
-
-
-
-
-
-
-
-
 Use the commands to know more about the same
 
 Below are some features I provide'''
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ABOUT_TEXT = """
