@@ -153,7 +153,7 @@ async def shortener_api_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     if len(cmd) == 1:
-        s = SHORTENER_API_MESSAGE.format(base_site=user["base_site=atglinks.com"], shortener_api=user["shortener_api"])
+        s = SHORTENER_API_MESSAGE.format(base_site=["atglinks.com"], shortener_api=user["shortener_api"])
 
         return await m.reply(s)
     elif len(cmd) == 2:
