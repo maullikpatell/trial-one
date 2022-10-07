@@ -40,6 +40,27 @@ I have lots of handy features, such as
 Helpful commands:
 - /start: Starts me! You've probably already used this.
 - /batch -100xxx: To short or convert all posts of your channel
+Commands:
+
+- /shortener_api
+
+- /mdisk_api
+
+- /header
+
+- /footer
+
+- /username
+
+- /banner_image
+
+- /me
+
+Extra......
+
+- /include_domain
+
+- /exclude_domain
 If you have any questions on how to use me,
 have a look at my [Tutorial](),
 or contact to {owner}.
@@ -53,18 +74,7 @@ or contact to {owner}.
 
 
 
-Available commands:
 
-- /shortener_api
-- /mdisk_api
-- /header
-- /footer
-- /username
-- /banner_image
-- /me
-- /base_site
-- /include_domain
-- /exclude_domain
 
 Use the commands to know more about the same
 
