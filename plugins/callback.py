@@ -127,7 +127,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
 
     elif query.data == 'start_command':
         new_user = await get_user(query.from_user.id)
-        tit = START_MESSAGE.format(query.from_user.mention, new_user["method"], new_user["base_site=atglinks.com"])
+        tit = START_MESSAGE.format(query.from_user.mention, new_user["method"], new_user["base_site"])
 
         await query.message.edit(tit, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
