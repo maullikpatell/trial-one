@@ -140,7 +140,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
         await query.message.edit("Method changed successfully to `{method}`".format(method=method_name, username=user), reply_markup=REPLY_MARKUP)
 
     elif query.data == 'method_command':
-        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site=atglinks.com"])
+        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
         return await query.message.edit(s, reply_markup=METHOD_REPLY_MARKUP)
     elif query.data == 'cbatch_command':
         if user_id not in ADMINS:
