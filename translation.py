@@ -98,9 +98,9 @@ Current Method: {method}
     
 Methods Available:
 
-> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> `mdlink` - Change all the links of the post to your MDisk account first and then short to ATGLINKS.
 
-> `shortener` - Short all the links of the post to {shortener} link directly.
+> `shortener` - Short all the links of the post to ATGLINKS directly.
 To change method, choose it from the following options:
 
 """
