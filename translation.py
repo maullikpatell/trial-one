@@ -216,7 +216,7 @@ USER_ABOUT_MESSAGE = """
 
 MDISK_API_MESSAGE = """To add or update your Mdisk API, \n`/mdisk_api mdisk_api`
             
-Ex: `/mdisk_api 6LZq851sXoPHugiKQq`
+Ex: `/mdisk_api oPrFaMs3aPyqiPSt6LJn`
             
 Others Mdisk Links will be automatically changed to the API of this Mdisk account
 
