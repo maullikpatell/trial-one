@@ -13,19 +13,19 @@ Ex: `/batch -100xxx`
 
 START_MESSAGE = '''Hello, {}
 
-I'm a Bot to Convert Other MDisk Links to your MDisk Links or Short Other Links to Shortener Website Links by Using your API. 
+I'm ATGLINKS Bot to Short Your Links to ATGLINKS by Using your ATGLINKS API. 
 
-Just Send me Any Post with Mdisk or Other Links. I will Convert Those Links Using Your API and Send them Back To You. I work in Channels too. 
+Just Send me Any Post with Any Links. I will Short Those Links Using Your API and Send them Back To You. I work in Channels too. 
 
-Hit /help for more information about this Bot
+Hit help button for more information about this Bot
 
 Current Method Selected: **{}**
-Current Website Selected: **{}**
+
 '''
 
 
 HELP_MESSAGE = '''
-Hey! My name is {firstname}. I am a Link Convertor and Shortener Bot, here to make your Work Easy and Help you to Earn more
+Hey! My name is {firstname}. I am a Link ATGLINKS Shortener Bot, here to make your Work Easy and Help you to Earn more
 
 I have lots of handy features, such as 
 
@@ -36,17 +36,22 @@ I have lots of handy features, such as
 - Header and Footer Text support
 - Replace Username
 - Banner Image
-- Batch convert (Admin Only Use)
-- Channel Support (Admin Only Use)
-- Convert forwarded posts (Admin Only Use)
 
 Helpful commands:
-
 - /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
 - /batch -100xxx: To short or convert all posts of your channel
+If you have any questions on how to use me,
+have a look at my [Tutorial](),
+or contact to {owner}.
 
-If you have any bugs or questions on how to use me, have a look at my [website]({repo}), or contact to {owner}.
+
+
+
+
+
+
+
+
 
 Available commands:
 
@@ -178,11 +183,11 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 ])
 
 USER_ABOUT_MESSAGE = """
-- Shortener Website: {base_site}
+
 
 - Method: {method}
 
-- {base_site} API: {shortener_api}
+- API: {shortener_api}
 
 - Mdisk API: {mdisk_api}
 
@@ -211,13 +216,10 @@ Current Mdisk API: `{}`"""
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
 `/shortener_api [api]`
             
-Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
-
-Current Website: {base_site}
-
-To change your Shortener Website: /base_site
-
+Ex: `/shortener_api acccdf4778c9453ea9f193655bde0af2af01cb9e`
 Current Shortener API: `{shortener_api}`"""
+
+
 
 HEADER_MESSAGE = """Reply to the Header Text You Want
 
