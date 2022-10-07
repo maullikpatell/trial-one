@@ -135,7 +135,7 @@ HELP_REPLY_MARKUP = InlineKeyboardMarkup([
     ],
 
     [
-        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf'),
+
         InlineKeyboardButton('Admins', callback_data=f'admins_list'),    
     ],
 
@@ -176,7 +176,7 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup([
     [
         InlineKeyboardButton('MDLINK', callback_data=f'change_method#mdlink'),
         InlineKeyboardButton('Shortener', callback_data='change_method#shortener'),
-        InlineKeyboardButton('Mdisk', callback_data='change_method#mdisk')
+        
     ],
         [
         InlineKeyboardButton('Back', callback_data=f'help_command'),
@@ -262,7 +262,7 @@ This image will be automatically replaced with other images in the post
 
 To remove custom image, `/banner_image remove`
 
-Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+Eg: `/banner_image https://te.legra.ph/file/15abe2b2e161eebdc1595.jpg`"""
 
 INCLUDE_DOMAIN_TEXT = """
 Use this option if you want to short only links from the following domains list.
