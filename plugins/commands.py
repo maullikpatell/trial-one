@@ -48,10 +48,14 @@ async def start(c:Client, m:Message):
 async def help_command(c, m: Message):
     s = HELP_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
-                username=temp.BOT_USERNAME,)
-                
+                username=temp.BOT_USERNAME,
+                repo=SOURCE_CODE,
+                owner="@ask_admin001" )
 
-   
+    if WELCOME_IMAGE:
+        return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
+    await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+
 
 
 @Client.on_message(filters.command('about'))
