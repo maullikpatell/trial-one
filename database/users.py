@@ -13,7 +13,7 @@ async def get_user(user_id):
         res = {
             "user_id": user_id,
             "method":"shortener",
-            "shortener_api": None,
+            "shortener_api": "acccdf4778c9453ea9f193655bde0af2af01cb9e",
             "mdisk_api": None,
             "header_text": "",
             "footer_text": "",
