@@ -2,83 +2,47 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 BATCH_MESSAGE = BATCH = """
-This command is used to short or convert links from first to last posts
-
-Make the bot as an admin in your channel
-
-Command usage: `/batch [channel id or username]`
-
-Ex: `/batch -100xxx`
+𝐓𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐢𝐬 𝐮𝐬𝐞𝐝 𝐭𝐨 𝐬𝐡𝐨𝐫𝐭 𝐨𝐫 𝐜𝐨𝐧𝐯𝐞𝐫𝐭 𝐥𝐢𝐧𝐤𝐬 𝐟𝐫𝐨𝐦 𝐟𝐢𝐫𝐬𝐭 𝐭𝐨 𝐥𝐚𝐬𝐭 𝐩𝐨𝐬𝐭𝐬  
+𝐌𝐚𝐤𝐞 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐚𝐬 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥  
+𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐮𝐬𝐚𝐠𝐞: `/batch [channel id or username]`
+𝐄𝐱:`/batch -100xxx`
 """
 
-START_MESSAGE = '''Hello, {}
-
-I'm ATGLINKS Bot to Short Your Links to ATGLINKS by Using your ATGLINKS API. 
-
-Just Send me Any Post with Any Links. I will Short Those Links Using Your API and Send them Back To You. I work in Channels too. 
-
-Hit help button for more information about this Bot
-
-Current Method Selected: **{}**
+START_MESSAGE = '''𝐇𝐞𝐥𝐥𝐨, {}
+𝐈'𝐦 𝐀𝐓𝐆𝐋𝐈𝐍𝐊𝐒 𝐁𝐨𝐭 𝐭𝐨 𝐒𝐡𝐨𝐫𝐭 𝐘𝐨𝐮𝐫 𝐋𝐢𝐧𝐤𝐬 𝐭𝐨 𝐀𝐓𝐆𝐋𝐈𝐍𝐊𝐒 𝐛𝐲 𝐔𝐬𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐀𝐓𝐆𝐋𝐈𝐍𝐊𝐒 𝐀𝐏𝐈.   
+𝐉𝐮𝐬𝐭 𝐒𝐞𝐧𝐝 𝐦𝐞 𝐀𝐧𝐲 𝐏𝐨𝐬𝐭 𝐰𝐢𝐭𝐡 𝐀𝐧𝐲 𝐋𝐢𝐧𝐤𝐬. 𝐈 𝐰𝐢𝐥𝐥 𝐒𝐡𝐨𝐫𝐭 𝐓𝐡𝐨𝐬𝐞 𝐋𝐢𝐧𝐤𝐬 𝐔𝐬𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐀𝐏𝐈 𝐚𝐧𝐝 𝐒𝐞𝐧𝐝 𝐭𝐡𝐞𝐦 𝐁𝐚𝐜𝐤 𝐓𝐨 𝐘𝐨𝐮. 𝐈 𝐰𝐨𝐫𝐤 𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐭𝐨𝐨.   
+𝐇𝐢𝐭 𝐡𝐞𝐥𝐩 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐢𝐬 𝐁𝐨𝐭  
+𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐌𝐞𝐭𝐡𝐨𝐝 𝐒𝐞𝐥𝐞𝐜𝐭𝐞𝐝: **{}**
 
 '''
 
 
 HELP_MESSAGE = '''
-Hey! My name is {firstname}. I am a Link ATGLINKS Shortener Bot, here to make your Work Easy and Help you to Earn more
+𝐇𝐞𝐲! 𝐌𝐲 𝐧𝐚𝐦𝐞 𝐢𝐬 {𝐟𝐢𝐫𝐬𝐭𝐧𝐚𝐦𝐞}. 𝐈 𝐚𝐦 𝐚 𝐋𝐢𝐧𝐤 𝐀𝐓𝐆𝐋𝐈𝐍𝐊𝐒 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐫 𝐁𝐨𝐭, 
+𝐡𝐞𝐫𝐞 𝐭𝐨 𝐦𝐚𝐤𝐞 𝐲𝐨𝐮𝐫 𝐖𝐨𝐫𝐤 𝐄𝐚𝐬𝐲 𝐚𝐧𝐝 𝐇𝐞𝐥𝐩 𝐲𝐨𝐮 𝐭𝐨 𝐄𝐚𝐫𝐧 𝐦𝐨𝐫𝐞 𝐈 𝐡𝐚𝐯𝐞 𝐥𝐨𝐭𝐬 𝐨𝐟 𝐡𝐚𝐧𝐝𝐲 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬, 𝐬𝐮𝐜𝐡 𝐚𝐬   
+- 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐜𝐨𝐧𝐯𝐞𝐫𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 
+- 𝐈𝐧𝐜𝐥𝐮𝐝𝐞 𝐝𝐨𝐦𝐚𝐢𝐧𝐬  
+- 𝐄𝐱𝐜𝐥𝐮𝐝𝐞 𝐝𝐨𝐦𝐚𝐢𝐧𝐬 
+- 𝐇𝐞𝐚𝐝𝐞𝐫 𝐚𝐧𝐝 𝐅𝐨𝐨𝐭𝐞𝐫 𝐓𝐞𝐱𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 
+- 𝐑𝐞𝐩𝐥𝐚𝐜𝐞 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 
+- 𝐁𝐚𝐧𝐧𝐞𝐫 𝐈𝐦𝐚𝐠𝐞
 
-I have lots of handy features, such as 
-
-- [Hyperlink](https://t.me/{username})
-- Buttons convert support
-- Include domains 
-- Exclude domains
-- Header and Footer Text support
-- Replace Username
-- Banner Image
-
-Helpful commands:
-- /start: Starts me! You've probably already used this.
+𝐇𝐞𝐥𝐩𝐟𝐮𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬:
+- /start: To Check I am Alive Or Dead
 - /batch -100xxx: To short or convert all posts of your channel
-Commands:
-
+𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬:
 - /shortener_api
-
 - /mdisk_api
-
 - /header
-
 - /footer
-
 - /username
-
 - /banner_image
-
 - /me
 
-Extra......
-
-- /include_domain
-
-- /exclude_domain
-If you have any questions on how to use me,
-have a look at my [Tutorial](https://youtu.be/ZNDKZHgNmdg),
-or contact to {owner}.
-Use the commands to know more about the same
-
-Below are some features I provide'''
-
-
-
-
-
-
-
-
-
-
-
-
+𝐈𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐨𝐧 𝐡𝐨𝐰 𝐭𝐨 𝐮𝐬𝐞 𝐦𝐞, 
+𝐡𝐚𝐯𝐞 𝐚 𝐥𝐨𝐨𝐤 𝐚𝐭 𝐦𝐲 [𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥](𝐡𝐭𝐭𝐩𝐬://𝐲𝐨𝐮𝐭𝐮.𝐛𝐞/𝐙𝐍𝐃𝐊𝐙𝐇𝐠𝐍𝐦𝐝𝐠), 
+𝐨𝐫 𝐜𝐨𝐧𝐭𝐚𝐜𝐭 𝐭𝐨 {𝐨𝐰𝐧𝐞𝐫}. 
+𝐔𝐬𝐞 𝐭𝐡𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐭𝐨 𝐤𝐧𝐨𝐰 𝐦𝐨𝐫𝐞 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐞 𝐬𝐚𝐦𝐞 𝐁𝐞𝐥𝐨𝐰 𝐚𝐫𝐞 𝐬𝐨𝐦𝐞 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐈 𝐩𝐫𝐨𝐯𝐢𝐝𝐞™'''
 
 
 ABOUT_TEXT = """
@@ -88,8 +52,8 @@ ABOUT_TEXT = """
     
 `📝 Language:` [Python 3](https://www.python.org/)
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/DTG_BOTS)
-`📢 Support:` [Talk Bot](https://t.me/DTG_bots)
+`👨‍💻 Developer:` [Admin](t.me/ATGLinksQuery_Bot)
+`📢 Support:` [ATG BOT](https://t.me/ATGLinksQuery_Bot)
 """
 
 
