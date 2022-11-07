@@ -10,3 +10,8 @@ shortzy
 aiofiles
 validators
 python-dotenv
+tgcrypto
+marshmallow==3.14.1
+umongo==3.0.1
+requests
+imdbpy==2021.4.18
