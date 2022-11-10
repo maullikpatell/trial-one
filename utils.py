@@ -375,9 +375,7 @@ async def user_api_check(user):
         text = "\n\nSet your /method first"
     return text or True
 
-  
-  BTN_URL_REGEX = re.compile(
-    r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))")
+
 
 
 imdb = IMDb() 
