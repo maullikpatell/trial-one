@@ -10,4 +10,4 @@ cd /trial-one
 pip install --upgrade pip
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
-python3 -m main
+python3 -m main.py
